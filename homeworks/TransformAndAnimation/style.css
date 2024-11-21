@@ -1,0 +1,277 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    background-color: #002050;
+    color: #f5f5f5;
+    text-align: center;
+}
+
+div[class$="flex"] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+}
+
+h1.header__main-title {
+    background-color: #f5f5f5;
+    color: #02006d;
+    height: 80px;
+    line-height: 80px;
+}
+
+.main__exercise__header {
+    margin-bottom: 70px;
+}
+
+/* Задаем основные стили для контейнеров где будут примеры
+с использованием свойства "transform" */
+
+div[class^="main__exercise__example-transform"] {
+    width: 300px;
+    height: 200px;
+    color: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 20px;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.main__exercise__example-transform-1 {
+    transform: rotate(15deg);
+    /* Вращаем контейнер на 15 градусов по часовой стрелке */
+    background-color: #fdcaac;
+}
+
+.main__exercise__example-transform-2 {
+    transform: scale(1.2, 0.8);
+    /* Растягиваем контейнер по ширине и сжимаем по высоте */
+    background-color: #c2ffd4;
+}
+
+.main__exercise__example-transform-3 {
+    transform: translate(-20px, 40px);
+    /* Перемещяем контейнер влево на 20px и вниз на 40px */
+    background-color: #c5ceff;
+}
+
+.main__exercise__example-transform-4 {
+    transform: skewX(10deg);
+    /* Наклоняем на 10 градусов по оси X влево*/
+    background-color: #f597fd;
+}
+
+.main__exercise__example-transform-5 {
+    transform: skewY(-20deg);
+    /* Наклоняем на 20 градусов по оси Y.
+    Здесь левая часть контейнера спускается вниз, 
+    а правая часть поднимается вверх*/
+    background-color: #b6fdfa;
+}
+
+.main__exercise__example-transform-6 {
+    transform: skew(5deg, -10deg) scale(0.7, 0.8) rotate(90deg);
+    /* А это пример того как на одном контейнере можно 
+    использовать несколько трансформации */
+    background-color: #b6fdfa;
+}
+
+/* Задаем основные стили для контейнеров где будут примеры
+с использованием свойства "transition" */
+
+div[class^="main__exercise__example-transition"] {
+    width: 300px;
+    height: 200px;
+    color: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 20px;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.main__exercise__example-transition-1 {
+    background-color: #bdd2ff;
+    transition: all 1s ease;
+
+    &:hover {
+        transform: rotate(10deg);
+        background-color: #fffc68;
+        border-radius: 25px;
+    }
+    /* При наведении мышью на контейнер, меняется его цвет фона, 
+    контейнер поворачивается на 10 градусов по часовой стрелке, 
+    и его углы закругляются. Все эти эффекты протекают плавно в 
+    течение 1 секунды с ускорение и замедлением */
+}
+
+.main__exercise__example-transition-2 {
+    background-color: #ffbbbb;
+    transition: all 1s ease;
+
+    &:hover {
+        transform: scaleX(1.2);
+        background-color: #008a1e;
+        color: #f1f1f1;
+        border-radius: 15px;
+    }
+    /* При наведении мышью на данный контейнер, он растягивается 
+    по ширине, углы закругляются и меняется цвет фона
+     */
+}
+
+.main__exercise__example-transition-3 {
+    background-color: #a4fdc2;
+    transition: all 1.5s 0.6s ease;
+
+    &:hover {
+        transform: rotate(360deg);
+    }
+    /* При наведении мышью на контейнер, он вращается после задержки
+    и делает полный оборот за 1,5 секунды */
+}
+
+/* Задаем основные стили для контейнеров где будут примеры
+с использованием свойства "animation" */
+
+.div[class^="main__exercise__example-animation"] {
+    width: 300px;
+    height: 200px;
+    color: #000;
+}
+
+/* анимация "appear" то есть появление:
+Контейнер словно появляется расширяясь из центра
+ */
+
+@keyframes appear {
+    from {
+        width: 0;
+        height: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: transparent;
+        background-color: transparent;
+        font-size: 0;
+    }
+    to {
+        width: 300px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #000;
+        font-size: 1.3rem;
+    }
+}
+
+/* начальные стили контейнера должны соответствовать начальным 
+условиям анимации. */
+.main__exercise__example-animation-1 {
+    width: 0;
+    height: 0;
+    font-size: 0;
+    background-color: #a4fdc2;
+   
+    /* Здесь мы задаем сразу все параметры анимации.
+    Анимация длится 3 секунды и начинается с задержкой 2 секунды.
+    Здесь анимация повторяется бесконечно много раз. При этом при каждой
+    второй итерации, анимация проигрывается в обратном направлении. Это 
+    происходит благодаря параметру "alternate" */
+    animation: appear 3s ease 2s infinite alternate;
+}
+
+/* Задаем несколько слоев контейнеров с фиксированными размерами
+чтобы можно было контролировать анимации внутри этих слоев */
+/* .main__exercise__flex-container--fixed-height {
+    min-height: 450px;
+    justify-content: stretch;
+    flex-wrap: wrap;
+} */
+
+.layer-1 {
+    width: 400px;
+    height: 400px;
+    border: 1px solid #eeeeee;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Анимация "move" приводит в движение контейнер и 
+перемещает его по траектории которая описывает квадрат */
+@keyframes move {
+    0% {
+        transform: translate(100px,100px);
+    }
+    25% {
+        transform: translate(100px,-100px);
+    }
+    50% {
+        transform: translate(-100px,-100px);
+    }
+    75% {
+        transform: translate(-100px,100px);
+    }
+    100% {
+        transform: translate(100px,100px);
+    }
+}
+
+/* начальные стили контейнера должны соответствовать начальным 
+условиям анимации. */
+.main__exercise__example-animation-2 {
+    transform: translate(100px,100px);
+    background-color: #ddb8ff;
+
+    /* Данная анимация линейная. Она повторяется неограничено долго
+    пока страница видима пользователю. Анимация начинается с задержкой в 1 секунду */
+    animation: move 5s linear 1s infinite;
+    padding: 20px;
+    color: #000;
+}
+
+/* Анимация "dropDown" имитирует падение контейнера сверху */
+@keyframes dropDown {
+    0% {
+        bottom: 2000px
+    }
+    80% {
+        bottom: 0px;
+    }
+    100% {
+        bottom: 0px;
+    }
+}
+
+/* Задаем абсолютное позиционирование контейнеру внутри которого 
+будет контейнер с анимацией */
+.absolute {
+    position: absolute;
+}
+
+.main__exercise__example-animation-3 {
+    background-color: #ddb8ff;
+    position: relative;
+    padding: 20px;
+    color: #000;
+
+    /* Данная анимация повторяется только 10 раз
+    и в конце контейнер сохраняет стили которые прописаны в последнем
+    кадре анимации при 100% - это благодаря параметру "both" */
+    animation: dropDown 4s ease-out 0.5s 100 both;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Трансформация и анимации</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+
+        <h1 class="header__main-title">Трансформация и анимации</h1>
+
+    </header>
+
+
+    <main class="main">
+
+
+        <div class="main__exercise main__exercise-1">
+
+            <h2 class="main__exercise__header">Задание 1: Использование `transform`</h2>
+
+            <div class="main__exercise__flex-container--flex">
+                <div class="main__exercise__example-transform-1">
+                    <p class="main__exercise__example-text">transform: rotate(15deg)</p>
+                </div>
+                <div class="main__exercise__example-transform-2">
+                    <p class="main__exercise__example-text">transform: scale(1.2, 0.8);</p>
+                </div>
+                <div class="main__exercise__example-transform-3">
+                    <p class="main__exercise__example-text">transform: translate(-20px, 40px);</p>
+                </div>
+                <div class="main__exercise__example-transform-4">
+                    <p class="main__exercise__example-text">transform: skewX(10deg);</p>
+                </div>
+                <div class="main__exercise__example-transform-5">
+                    <p class="main__exercise__example-text">transform: skewY(-20deg);</p>
+                </div>
+                <div class="main__exercise__example-transform-6">
+                    <p class="main__exercise__example-text">transform: skew(5deg, -10deg) scale(0.7, 0.8) rotate(90deg);</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="main__exercise main__exercise-2">
+
+            <h2 class="main__exercise__header">Задание 2: Плавные трансформации с `transition`</h2>
+
+            <div class="main__exercise__flex-container--flex">
+                <div class="main__exercise__example-transition-1">
+                    <p class="main__exercise__example-text">Вращение и изменение цвета фона при наведении мышью. Также углы будут закруглены</p>
+                </div>
+                <div class="main__exercise__example-transition-2">
+                    <p class="main__exercise__example-text">Изменение масштаба и цветов при наведении мышью</p>
+                </div>
+                <div class="main__exercise__example-transition-3">
+                    <p class="main__exercise__example-text">Вращение с задержкой</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="main__exercise main__exercise-3">
+            
+            <h2>Задание 3: Анимации с использованием `@keyframes`</h2>
+
+            <div class="main__exercise__flex-container--flex">
+                <div class="layer-1">
+                    <div class="main__exercise__example-animation-1">
+                        <p class="main__exercise__example-text">Появление с задержкой</p>
+                    </div>
+                </div>
+                <div class="layer-1">
+                    <div class="main__exercise__example-animation-2">
+                        <p class="main__exercise__example-text">Движение внутри</p>
+                    </div>
+                </div>
+            
+                <!-- Добавляем несколько слоев контейнеров, чтобы можно
+                 было использовать абсолютное и относительное позиционирование -->
+                <div class="layer-1">
+                    <div class="layer-2 absolute">
+                        <div class="main__exercise__example-animation-3">
+                            <p class="main__exercise__example-text">Появление из за пределов экрана</p>
+                        </div>
+                    </div>
+                </div>  
+            </div> 
+        </div>
+
+
+    </main>
+    
+</body>
+</html>
+
