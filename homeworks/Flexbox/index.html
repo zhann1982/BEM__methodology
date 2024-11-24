@@ -8,260 +8,294 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>  Flexbox  </h1>
 
+    <header class="header section">
+        <h1 class="header__title">  Flexbox  </h1>
+    </header>
 
-    <h2> Задание 1: Свойство Display </h2>
+    <main class="main section">
 
-    <h3>Display: block;</h3>
-    <div class="block exercise1">
+        <div class="main__exercise-1 main__exercise">
+            <h2 class="main__exercise__title"> Задание 1: Свойство Display </h2>
+
+            <h3 class="main__exercise__subtitle">Display: block;</h3>
+
+            <div class="main__exercise-1__example main__exercise__example-block">
+               
+                <p class="main__exercise__example-block__item">item-1</p>
+                <p class="main__exercise__example-block__item">item-2</p>
+                <p class="main__exercise__example-block__item">item-3</p>
+        
+                <!-- Добавляем несколько строчных элементов, чтобы было видно как они себя ведут 
+                 внутри блочного контейнера -->
+                <a class="main__exercise__example-block__link" href="#" target="_blank" rel="noopener noreferrer">Ссылка 1</a>
+                <a class="main__exercise__example-block__link" href="#" target="_blank" rel="noopener noreferrer">Ссылка 2</a>
+        
+            </div>
+        
+            <h3 class="main__exercise__subtitle">Display: inline;</h3>
+            <div class="main__exercise-1__example main__exercise__example-inline">
+        
+                <!-- Добавляем внутри строчного контейнера строчный элемент, чтобы не 
+                 терять эффект строчности -->
+                <span class="main__exercise__example-inline__text">Display: inline;</span>
+            </div>
+        
+            <!-- Добавляем несколько строчных элементов, чтобы было видно как себя ведет верхний 
+             контейнер со строчным типом -->
+            <a class="main__exercise__example-inline__link" href="#" target="_blank" rel="noopener noreferrer">Ссылка 1</a>
+            <a class="main__exercise__example-inline__link" href="#" target="_blank" rel="noopener noreferrer">Ссылка 2</a>
+        
+            <h3 class="main__exercise__subtitle">Display: flex;</h3>
+            <div class="main__exercise-1__example main__exercise__example-flex">
+                
+                <!-- Все элементы ниже должны выстроиться в одну строку, так как 
+                 задано свойство flex -->
+                <p class="main__exercise__example-flex__item">item-1</p>
+                <p class="main__exercise__example-flex__item">item-2</p>
+                <p class="main__exercise__example-flex__item">item-3</p>
+                <a class="main__exercise__example-flex__link" href="#" target="_blank" rel="noopener noreferrer">Ссылка 1</a>
+                <a class="main__exercise__example-flex__link" href="#" target="_blank" rel="noopener noreferrer">Ссылка 2</a>
+        
+            </div>
+        </div>
+
+        <div class="main__exercise-2 main__exercise">
+            <h2 class="main__exercise__title"> Задание 2: Flex-контейнер </h2>
+
+            <div class="main__exercise-2__example">
+        
+               <!-- Все элементы ниже должны выстроиться в одну строку, так как 
+                 задано свойство flex -->
+                <div class="main__exercise-2__example__div">DIV</div>
+                <p class="main__exercise-2__example__text">Абзац</p>
+                <a class="main__exercise-2__example__link" href="#" target="_blank" rel="noopener noreferrer">Ссылка 1</a>
+                <a class="main__exercise-2__example__link" href="#" target="_blank" rel="noopener noreferrer">Ссылка 2</a>
+                <img class="main__exercise-2__example__img" src="./media/bear.png" alt="toy bear" height="40">
+                <img class="main__exercise-2__example__img" src="./media/robot.png" alt="toy robot" height="40">
+
+                <!-- Во внутренних элементах мы не использовали 
+                 методику BEM, так как в этом нет надобности -->
+        
+            </div>
+        </div>
+
+        <div class="main__exercise-3 main__exercise">
+
+            <h2 class="main__exercise__title"> Задание 3: Свойства `flex-direction`, `flex-wrap`, `flex-flow` </h2>
+
+            <div class="main__exercise-3__example__flex-column-wrap  main__exercise-3__example">
+                <!-- Все элементы будут выстроены в колонку. Высота блока ограничена до 500px.
+                 Поэтому элементы, которые не влезают, будут перенесены в новую колонку. -->
+               <div class="main__exercise-3__example__flex-column-wrap__item">item--1</div>
+               <div class="main__exercise-3__example__flex-column-wrap__item">item--2</div>
+               <div class="main__exercise-3__example__flex-column-wrap__item">item--3</div>
+               <div class="main__exercise-3__example__flex-column-wrap__item">item--4</div>
+               <div class="main__exercise-3__example__flex-column-wrap__item">item--5</div>
+        
+            </div>
+        
+            <div class="main__exercise-3__example__flex-flow  main__exercise-3__example">
+                
+                <!-- Здесь использовано сокращенное свойство 'flex-flow'.
+                 Но в этот раз мы заменили значение 'column' на 'column-reverse' -->
+                <div class="main__exercise-3__example__flex-flow__item">item-1</div>
+                <div class="main__exercise-3__example__flex-flow__item">item-2</div>
+                <div class="main__exercise-3__example__flex-flow__item">item-3</div>
+                <div class="main__exercise-3__example__flex-flow__item">item-4</div>
+                <div class="main__exercise-3__example__flex-flow__item">item-5</div>
+         
+             </div>
+
+        </div>
+
+        <div class="main__exercise-4 main__exercise">
+
+            <h2 class="main__exercise__title"> Задание 4: Выравнивание элементов </h2>
+
+            <div class="main__exercise-4__example__flex-container">
        
-        <p>item-1</p>
-        <p>item-2</p>
-        <p>item-3</p>
+               <!-- Элементы ниже будут иметь разные размеры, чтобы более наглядно продемонстрировать
+                эффекты свойств justify-content, align-items, align-content -->
+               <div class="main__exercise-4__example__flex-container__item"> <p>item-1</p> </div>
+               <div class="main__exercise-4__example__flex-container__item"> <p>item-2</p> </div>
+               <div class="main__exercise-4__example__flex-container__item"> <p>item-3</p> </div>
+               <div class="main__exercise-4__example__flex-container__item"> <p>item-4</p> </div>
+               <div class="main__exercise-4__example__flex-container__item"> <p>item-5</p> </div>
+               <div class="main__exercise-4__example__flex-container__item"> <p>item-6</p> </div>
+               <div class="main__exercise-4__example__flex-container__item"> <p>item-7</p> </div>
+               <div class="main__exercise-4__example__flex-container__item"> <p>item-8</p> </div>
+               <div class="main__exercise-4__example__flex-container__item"> <p>item-9</p> </div>
+               <div class="main__exercise-4__example__flex-container__item"> <p>item-10</p> </div>
+               <div class="main__exercise-4__example__flex-container__item"> <p>item-11</p> </div>
+               <div class="main__exercise-4__example__flex-container__item"> <p>item-12</p> </div>
+       
+            </div>
 
-        <!-- Добавляем несколько строчных элементов, чтобы было видно как они себя ведут 
-         внутри блочного контейнера -->
-        <a href="#" target="_blank" rel="noopener noreferrer">Ссылка 1</a>
-        <a href="#" target="_blank" rel="noopener noreferrer">Ссылка 2</a>
-
-    </div>
-
-    <h3>Display: inline;</h3>
-    <div class="inline exercise1">
-
-        <!-- Добавляем внутри строчного контейнера строчный элемент, чтобы не 
-         терять эффект строчности -->
-        <span>Display: inline;</span>
-    </div>
-
-    <!-- Добавляем несколько строчных элементов, чтобы было видно как себя ведет верхний 
-     контейнер со строчным типом -->
-    <a href="#" target="_blank" rel="noopener noreferrer">Ссылка 1</a>
-    <a href="#" target="_blank" rel="noopener noreferrer">Ссылка 2</a>
-
-    <h3>Display: flex;</h3>
-    <div class="flex exercise1">
-        
-        <!-- Все элементы ниже должны выстроиться в одну строку, так как 
-         задано свойство flex -->
-        <p>item-1</p>
-        <p>item-2</p>
-        <p>item-3</p>
-        <a href="#" target="_blank" rel="noopener noreferrer">Ссылка 1</a>
-        <a href="#" target="_blank" rel="noopener noreferrer">Ссылка 2</a>
-
-    </div>
-
-
-    <h2> Задание 2: Flex-контейнер </h2>
-
-    <div class="exercise2">
-
-       <!-- Все элементы ниже должны выстроиться в одну строку, так как 
-         задано свойство flex -->
-        <div><p>DIV</p></div>
-        <p>Абзац</p>
-        <a href="#" target="_blank" rel="noopener noreferrer">Ссылка 1</a>
-        <a href="#" target="_blank" rel="noopener noreferrer">Ссылка 2</a>
-        <img src="./media/bear.png" alt="toy bear" height="40">
-        <img src="./media/robot.png" alt="toy robot" height="40">
-
-    </div>
-
-
-    <h2> Задание 3: Свойства `flex-direction`, `flex-wrap`, `flex-flow` </h2>
-
-    <div class="flex-column-wrap  exercise3">
-        <!-- Все элементы будут выстроены в колонку. Высота блока ограничена до 500px.
-         Поэтому элементы, которые не влезают, будут перенесены в новую колонку. -->
-       <div>item-1</div>
-       <div>item-2</div>
-       <div>item-3</div>
-       <div>item-4</div>
-       <div>item-5</div>
-
-    </div>
-
-    <div class="flex-flow  exercise3">
-        
-        <!-- Здесь использовано сокращенное свойство 'flex-flow'.
-         Но в этот раз мы заменили значение 'column' на 'column-reverse' -->
-        <div>item-1</div>
-        <div>item-2</div>
-        <div>item-3</div>
-        <div>item-4</div>
-        <div>item-5</div>
- 
-     </div>
-
-     <h2> Задание 4: Выравнивание элементов </h2>
-
-     <div class="flex-container">
-
-        <!-- Элементы ниже будут иметь разные размеры, чтобы более наглядно продемонстрировать
-         эффекты свойств justify-content, align-items, align-content -->
-        <div> <p>item-1</p> </div>
-        <div> <p>item-2</p> </div>
-        <div> <p>item-3</p> </div>
-        <div> <p>item-4</p> </div>
-        <div> <p>item-5</p> </div>
-        <div> <p>item-6</p> </div>
-        <div> <p>item-7</p> </div>
-        <div> <p>item-8</p> </div>
-        <div> <p>item-9</p> </div>
-        <div> <p>item-10</p> </div>
-        <div> <p>item-11</p> </div>
-        <div> <p>item-12</p> </div>
-
-     </div>
-
-
-     <h2> Задание 5: Свойства `flex-grow`, `flex-shrink`, `flex-basis` и сокращённое свойство `flex` </h2>
-
-     <!-- Ниже расположены несколько контейнеров элементы которых имеют разные значения для `flex-grow`, `flex-shrink`, `flex-basis` -->
-
-     <!-- Пример для `flex-grow` -->
-     <div class="flex-container-2">
-        <div class="item-1"><p>grow 2</p></div>
-        <div class="item-2"><p>grow 1</p></div>
-        <div class="item-3"><p>grow 1</p></div>
-     </div>
-
-     <!-- Пример для `flex-shrink` -->
-     <div class="flex-container-3">
-        <div class="item-1"><p>shrink 1</p></div>
-        <div class="item-2"><p>shrink 1</p></div>
-        <div class="item-3"><p>shrink 2</p></div>
-     </div>
-
-     <!-- Пример для `flex-basis` -->
-     <div class="flex-container-4">
-        <div class="item-1"><p>basis 100px</p></div>
-        <div class="item-2"><p>grow 1</p></div>
-        <div class="item-3"><p>grow 2</p></div>
-     </div>
-
-     <!-- Пример для `flex` который содержит значения `flex-grow`, `flex-shrink`, `flex-basis` -->
-     <div class="flex-container-5">
-        <div class="item-1"><p>flex: 0 0 120px;</p></div>
-        <div class="item-2"><p>flex: 0 1 100px;</p></div>
-        <div class="item-3"><p>flex: 2 1 70px;</p></div>
-     </div>
-
-
-     <h2> Задание 6: Практическое задание </h2>
-
-     <div class="flex-container-6">
-        <div class="item-1"><p>Ширина 50 %</p></div>
-        <div class="item-2"><p>Занимает оставшееся место</p></div>
-        <div class="item-3"><p>Ширина 150px</p></div>
-     </div>
-
-
-     <h2> Задание 7: Меню навигации с выравниванием по центру </h2>
-
-     <!-- Создаем меню темного цвета со ссылками -->
-     <nav>
-            <a href="#">Home</a>
-            <a href="#">News</a>
-            <a href="#">Authors</a>
-            <a href="#">Contact</a>
-            <a href="#">About</a>
-     </nav>
-
-
-     <h2> Задание 8: Галерея карточек </h2>
-
-     <!-- Создаем галерею из 12 карточек -->
-     <div class="gallery">
-
-        <!-- В каждой карточке есть заголовок, картинка, абзац и кнопка -->
-        <div class="card">
-            <h3>Lorem ipsum</h3>
-            <img src="https://picsum.photos/id/235/200/150" alt="random image">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing</p>
-            <button>Read more</button>
         </div>
 
-        <div class="card">
-            <h3>Repellendus pariatur</h3>
-            <img src="https://picsum.photos/id/257/200/150" alt="random image">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-            <button>Read more</button>
+        <div class="main__exercise-5 main__exercise">
+
+            <h2 class="main__exercise__title"> Задание 5: Свойства `flex-grow`, `flex-shrink`, `flex-basis` и сокращённое свойство `flex` </h2>
+
+            <!-- Ниже расположены несколько контейнеров элементы которых имеют разные значения для `flex-grow`, `flex-shrink`, `flex-basis` -->
+       
+            <!-- Пример для `flex-grow` -->
+            <div class="main__exercise-5__example__flex-container-2">
+               <div class="main__exercise-5__example__flex-container-2__item-1"><p>grow 2</p></div>
+               <div class="main__exercise-5__example__flex-container-2__item-2"><p>grow 1</p></div>
+               <div class="main__exercise-5__example__flex-container-2__item-3"><p>grow 1</p></div>
+            </div>
+       
+            <!-- Пример для `flex-shrink` -->
+            <div class="main__exercise-5__example__flex-container-3">
+               <div class="main__exercise-5__example__flex-container-3__item-1"><p>shrink 1</p></div>
+               <div class="main__exercise-5__example__flex-container-3__item-2"><p>shrink 1</p></div>
+               <div class="main__exercise-5__example__flex-container-3__item-3"><p>shrink 2</p></div>
+            </div>
+       
+            <!-- Пример для `flex-basis` -->
+            <div class="main__exercise-5__example__flex-container-4">
+               <div class="main__exercise-5__example__flex-container-4__item-1"><p>basis 100px</p></div>
+               <div class="main__exercise-5__example__flex-container-4__item-2"><p>grow 1</p></div>
+               <div class="main__exercise-5__example__flex-container-4__item-3"><p>grow 2</p></div>
+            </div>
+       
+            <!-- Пример для `flex` который содержит значения `flex-grow`, `flex-shrink`, `flex-basis` -->
+            <div class="main__exercise-5__example__flex-container-5">
+               <div class="main__exercise-5__example__flex-container-5__item-1"><p>flex: 0 0 120px;</p></div>
+               <div class="main__exercise-5__example__flex-container-5__item-2"><p>flex: 0 1 100px;</p></div>
+               <div class="main__exercise-5__example__flex-container-5__item-3"><p>flex: 2 1 70px;</p></div>
+            </div>
         </div>
 
-        <div class="card">
-            <h3>Consectetur</h3>
-            <img src="https://picsum.photos/id/217/200/150" alt="random image">
-            <p>Lorem ipsum dolor sit, amet consectetur !</p>
-            <button>Read more</button>
+        <div class="main__exercise-6 main__exercise">
+
+            <h2 class="main__exercise__title"> Задание 6: Практическое задание </h2>
+
+            <div class="main__exercise-6__example__flex-container-6">
+               <div class="main__exercise-6__example__flex-container-6__item-1"><p>Ширина 50 %</p></div>
+               <div class="main__exercise-6__example__flex-container-6__item-2"><p>Занимает оставшееся место</p></div>
+               <div class="main__exercise-6__example__flex-container-6__item-3"><p>Ширина 150px</p></div>
+            </div>
+
         </div>
 
-        <div class="card">
-            <h3>Pariatur excepturi</h3>
-            <img src="https://picsum.photos/id/137/200/150" alt="random image">
-            <p>Lorem ipsum dolor sit, amet elit.</p>
-            <button>Read more</button>
+        <div class="main__exercise-7 main__exercise">
+
+            <h2 class="main__exercise__title"> Задание 7: Меню навигации с выравниванием по центру </h2>
+
+            <!-- Создаем меню темного цвета со ссылками -->
+            <nav class="main__exercise-7__navbar-example">
+                   <a class="main__exercise-7__navbar-link" href="#">Home</a>
+                   <a class="main__exercise-7__navbar-link" href="#">News</a>
+                   <a class="main__exercise-7__navbar-link" href="#">Authors</a>
+                   <a class="main__exercise-7__navbar-link" href="#">Contact</a>
+                   <a class="main__exercise-7__navbar-link" href="#">About</a>
+            </nav>
+
         </div>
 
-        <div class="card">
-            <h3>Dolor sit amet</h3>
-            <img src="https://picsum.photos/id/231/200/150" alt="random image">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing </p>
-            <button>Read more</button>
+        <div class="main__exercise-8 main__exercise">
+
+            <h2 class="main__exercise__title"> Задание 8: Галерея карточек </h2>
+
+            <!-- Создаем галерею из 12 карточек -->
+            <div class="main__exercise-8__example__gallery">
+       
+               <!-- В каждой карточке есть заголовок, картинка, абзац и кнопка -->
+               <div class="main__exercise-8__example__gallery__card">
+                   <h3 class="main__exercise-8__example__gallery__card__title">Lorem ipsum</h3>
+                   <img class="main__exercise-8__example__gallery__card__image" src="https://picsum.photos/id/235/200/150" alt="random image">
+                   <p class="main__exercise-8__example__gallery__card__text">Lorem ipsum dolor sit, amet consectetur adipisicing</p>
+                   <button class="main__exercise-8__example__gallery__card__button">Read more</button>
+               </div>
+       
+               <div class="main__exercise-8__example__gallery__card">
+                   <h3 class="main__exercise-8__example__gallery__card__title">Repellendus pariatur</h3>
+                   <img class="main__exercise-8__example__gallery__card__image" src="https://picsum.photos/id/257/200/150" alt="random image">
+                   <p class="main__exercise-8__example__gallery__card__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                   <button class="main__exercise-8__example__gallery__card__button">Read more</button>
+               </div>
+       
+               <div class="main__exercise-8__example__gallery__card">
+                   <h3 class="main__exercise-8__example__gallery__card__title">Consectetur</h3>
+                   <img class="main__exercise-8__example__gallery__card__image" src="https://picsum.photos/id/217/200/150" alt="random image">
+                   <p class="main__exercise-8__example__gallery__card__text">Lorem ipsum dolor sit, amet consectetur !</p>
+                   <button class="main__exercise-8__example__gallery__card__button">Read more</button>
+               </div>
+       
+               <div class="main__exercise-8__example__gallery__card">
+                   <h3 class="main__exercise-8__example__gallery__card__title">Pariatur excepturi</h3>
+                   <img class="main__exercise-8__example__gallery__card__image" src="https://picsum.photos/id/137/200/150" alt="random image">
+                   <p class="main__exercise-8__example__gallery__card__text">Lorem ipsum dolor sit, amet elit.</p>
+                   <button class="main__exercise-8__example__gallery__card__button">Read more</button>
+               </div>
+       
+               <div class="main__exercise-8__example__gallery__card">
+                   <h3 class="main__exercise-8__example__gallery__card__title">Dolor sit amet</h3>
+                   <img class="main__exercise-8__example__gallery__card__image" src="https://picsum.photos/id/231/200/150" alt="random image">
+                   <p class="main__exercise-8__example__gallery__card__text">Lorem ipsum dolor sit, amet consectetur adipisicing </p>
+                   <button class="main__exercise-8__example__gallery__card__button">Read more</button>
+               </div>
+       
+               <div class="main__exercise-8__example__gallery__card">
+                   <h3 class="main__exercise-8__example__gallery__card__title">Adipisicing elit</h3>
+                   <img class="main__exercise-8__example__gallery__card__image" src="https://picsum.photos/id/227/200/150" alt="random image">
+                   <p class="main__exercise-8__example__gallery__card__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+                   <button class="main__exercise-8__example__gallery__card__button">Read more</button>
+               </div>
+       
+               <div class="main__exercise-8__example__gallery__card">
+                   <h3 class="main__exercise-8__example__gallery__card__title">Necessitatibus sunt</h3>
+                   <img class="main__exercise-8__example__gallery__card__image" src="https://picsum.photos/id/232/200/150" alt="random image">
+                   <p class="main__exercise-8__example__gallery__card__text">Lorem ipsum dolor sit, amet consectetur !</p>
+                   <button class="main__exercise-8__example__gallery__card__button">Read more</button>
+               </div>
+       
+               <div class="main__exercise-8__example__gallery__card">
+                   <h3 class="main__exercise-8__example__gallery__card__title">Lorem amet dolor</h3>
+                   <img class="main__exercise-8__example__gallery__card__image" src="https://picsum.photos/id/337/200/150" alt="random image">
+                   <p class="main__exercise-8__example__gallery__card__text">Lorem ipsum dolor sit, amet </p>
+                   <button class="main__exercise-8__example__gallery__card__button">Read more</button>
+               </div>
+       
+               <div class="main__exercise-8__example__gallery__card">
+                   <h3 class="main__exercise-8__example__gallery__card__title">Sunt assumenda</h3>
+                   <img class="main__exercise-8__example__gallery__card__image" src="https://picsum.photos/id/247/200/150" alt="random image">
+                   <p class="main__exercise-8__example__gallery__card__text">Lorem ipsum dolor sit, amet excepturi!</p>
+                   <button class="main__exercise-8__example__gallery__card__button">Read more</button>
+               </div>
+       
+               <div class="main__exercise-8__example__gallery__card">
+                   <h3 class="main__exercise-8__example__gallery__card__title">Ipsum dolor sit</h3>
+                   <img class="main__exercise-8__example__gallery__card__image" src="https://picsum.photos/id/234/200/150" alt="random image">
+                   <p class="main__exercise-8__example__gallery__card__text">Lorem ipsum dolor sit, amet consectetur elit.</p>
+                   <button class="main__exercise-8__example__gallery__card__button">Read more</button>
+               </div>
+       
+               <div class="main__exercise-8__example__gallery__card">
+                   <h3 class="main__exercise-8__example__gallery__card__title">Amet consectetur</h3>
+                   <img class="main__exercise-8__example__gallery__card__image" src="https://picsum.photos/id/437/200/150" alt="random image">
+                   <p class="main__exercise-8__example__gallery__card__text">Lorem ipsum dolor sit, amet consectetur </p>
+                   <button class="main__exercise-8__example__gallery__card__button">Read more</button>
+               </div>
+       
+               <div class="main__exercise-8__example__gallery__card">
+                   <h3 class="main__exercise-8__example__gallery__card__title">Lorem adipisicing</h3>
+                   <img class="main__exercise-8__example__gallery__card__image" src="https://picsum.photos/id/177/200/150" alt="random image">
+                   <p class="main__exercise-8__example__gallery__card__text">Lorem ipsum dolor sit, amet consectetur sit !</p>
+                   <button class="main__exercise-8__example__gallery__card__button">Read more</button>
+               </div>
+               
+            </div>
         </div>
 
-        <div class="card">
-            <h3>Adipisicing elit</h3>
-            <img src="https://picsum.photos/id/227/200/150" alt="random image">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
-            <button>Read more</button>
-        </div>
+    </main>
 
-        <div class="card">
-            <h3>Necessitatibus sunt</h3>
-            <img src="https://picsum.photos/id/232/200/150" alt="random image">
-            <p>Lorem ipsum dolor sit, amet consectetur !</p>
-            <button>Read more</button>
-        </div>
-
-        <div class="card">
-            <h3>Lorem amet dolor</h3>
-            <img src="https://picsum.photos/id/337/200/150" alt="random image">
-            <p>Lorem ipsum dolor sit, amet </p>
-            <button>Read more</button>
-        </div>
-
-        <div class="card">
-            <h3>Sunt assumenda</h3>
-            <img src="https://picsum.photos/id/247/200/150" alt="random image">
-            <p>Lorem ipsum dolor sit, amet excepturi!</p>
-            <button>Read more</button>
-        </div>
-
-        <div class="card">
-            <h3>Ipsum dolor sit</h3>
-            <img src="https://picsum.photos/id/234/200/150" alt="random image">
-            <p>Lorem ipsum dolor sit, amet consectetur elit.</p>
-            <button>Read more</button>
-        </div>
-
-        <div class="card">
-            <h3>Amet consectetur</h3>
-            <img src="https://picsum.photos/id/437/200/150" alt="random image">
-            <p>Lorem ipsum dolor sit, amet consectetur </p>
-            <button>Read more</button>
-        </div>
-
-        <div class="card">
-            <h3>Lorem adipisicing</h3>
-            <img src="https://picsum.photos/id/177/200/150" alt="random image">
-            <p>Lorem ipsum dolor sit, amet consectetur sit !</p>
-            <button>Read more</button>
-        </div>
-        
-     </div>
+    <footer class="footer section">
+        <a href="../../index.html" class="footer__link">back to main page</a>
+    </footer>
 
 </body>
 </html>

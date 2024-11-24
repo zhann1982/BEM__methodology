@@ -1,42 +1,42 @@
 /* Задание 1 ------------------------------------------------------  */
 
-h2 {
+h2.main__exercise__title {
     padding-top: 40px;
 }
 
-h3 {
+h3.main__exercise__subtitle {
     text-align: center;
 }
 
-.block {
+.main__exercise__example-block {
     display: block;  /* Это свойство стоит по умолчанию */
     /* контейнер блочного типа по ширине занимает всю сторку на 100% */
 
     padding: 10px;
 
-    p {
+    p.main__exercise__example-block__item {
         padding: 10px;
         margin: 10px;
         background-color: #fff;
     }
 
-    a {
+    a.main__exercise__example-block__link {
         margin-inline: 15px;
     }
 }
 
-.inline {
+.main__exercise__example-inline {
     display: inline; /* Это свойство меняет блочный тип на строчный. */
     /* Ширина элемента уменьшается до ширины внутреннего содержимого
     Если после этого элемента добавить строчный элемент, то он займет ту же строку 
     и встанет рядом. Также верхние и нижние отступы здесь не сработают */
 }
 
-.inline ~ a {
+.main__exercise__example-inline ~ a {
     margin-inline: 15px;
 }
 
-.flex {
+.main__exercise__example-flex {
     display: flex;  /* Данный тип дает возможность для более гибкого контроля содержимого 
     блока. Все элементы в блоке выстраиваются в строку, если не заданы свойства направления
     и переноса */
@@ -45,13 +45,13 @@ h3 {
     gap: 10px;
     padding: 10px;
 
-    p {
+    p.main__exercise__example-flex__item {
         padding: 10px;
         background-color: #fff;
     }
 }
 
-.exercise1 {
+.main__exercise-1__example {
     background-color: #70ff88;
     border-radius: 3px;
     margin-block: 30px; 
@@ -63,7 +63,7 @@ h3 {
 
 /* Задание 2 ------------------------------------------------------ */
 
-.exercise2 {
+.main__exercise-2__example {
 
     display: flex;
     /* Все элементы данного контейнера выстраиваются в одну строку */
@@ -73,23 +73,28 @@ h3 {
     background-color: #97e7ff;
     padding: 10px;
 
+    div.main__exercise-2__example__div {
+        background-color: #fff;
+        padding-inline: 15px;
+    }
+
 }    
 
 
 /* Задание 3 ------------------------------------------------------ */
 
-.flex-column-wrap {
+.main__exercise-3__example__flex-column-wrap {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
 
-.flex-flow {
+.main__exercise-3__example__flex-flow {
     display: flex;
     flex-flow: column-reverse wrap;
 }
 
-.exercise3 {
+.main__exercise-3__example {
     max-height: 280px;
     gap:10px;
     background-color: #fff7b1;
@@ -106,7 +111,7 @@ h3 {
 
 /* Задание 4 ------------------------------------------------------ */
 
-.flex-container {
+.main__exercise-4__example__flex-container {
     display: flex;
     flex-flow: row wrap; /* Задаем свойства направления и переноса */
     justify-content: flex-end; /* Пепеносим и прижимаем все элементы к правой части контейнера */
@@ -125,7 +130,7 @@ h3 {
     padding: 10px;
 
     /* Стилизуем дочерние элементы */
-    div {
+    div.main__exercise-4__example__flex-container__item {
         width: 80px;
         height: 50px;
         background-color: #ff9bd2;
@@ -136,19 +141,19 @@ h3 {
     }
 
     /* Меняем высоту всех нечетных элементов */
-    div:where(:nth-child(odd)){
+    div.main__exercise-4__example__flex-container__item:where(:nth-child(odd)){
         height: 70px;
         background-color: #f04eff;
     }
 
     /* Меняем ширину нескольких элементов случайно */
-    div:where(:nth-child(1), :nth-child(3), :nth-child(8), :nth-child(11),) {
+    div.main__exercise-4__example__flex-container__item:where(:nth-child(1), :nth-child(3), :nth-child(8), :nth-child(11),) {
         width: 50px;
         background-color: #fac6ff;
     }
 
     /* Меняем высоту нескольких элементов случайно */
-    div:where( :nth-child(3), :nth-child(5), :nth-child(12),) {
+    div.main__exercise-4__example__flex-container__item:where( :nth-child(3), :nth-child(5), :nth-child(12),) {
         height: 110px;
     }
 
@@ -160,7 +165,7 @@ h3 {
 
 /* Задание 5 ------------------------------------------------------ */
 
-.flex-container-2 {
+.main__exercise-5__example__flex-container-2 {
     display: flex;
     justify-content: stretch;
     gap: 10px;
@@ -179,20 +184,20 @@ h3 {
         }
     }
 
-    .item-1 {
+    .main__exercise-5__example__flex-container-2__item-1 {
         flex-grow: 2; /* Первый элемент стремиться расшириться в два раза больше соседних */
     }
 
-    .item-2 {
+    .main__exercise-5__example__flex-container-2__item-2 {
         flex-grow: 1;
     }
 
-    .item-3 {
+    .main__exercise-5__example__flex-container-2__item-3 {
         flex-grow: 1;
     }
 }
 
-.flex-container-3 {
+.main__exercise-5__example__flex-container-3 {
     display: flex;
     justify-content: stretch;
     gap: 10px;
@@ -211,20 +216,20 @@ h3 {
         }
     }
 
-    .item-1 {
+    .main__exercise-5__example__flex-container-3__item-1 {
         flex-shrink: 1;
     }
 
-    .item-2 {
+    .main__exercise-5__example__flex-container-3__item-2 {
         flex-shrink: 1;
     }
 
-    .item-3 {
+    .main__exercise-5__example__flex-container-3__item-3 {
         flex-shrink: 2; /* Последний элемент стремиться сжаться в два раза меньше соседних */
     }
 }
 
-.flex-container-4 {
+.main__exercise-5__example__flex-container-4 {
     display: flex;
     justify-content: stretch;
     gap: 10px;
@@ -243,20 +248,20 @@ h3 {
         }
     }
 
-    .item-1 {
+    .main__exercise-5__example__flex-container-4__item-1 {
         flex-basis: 100px;  /* Задаем начальное значение ширины для этого дочернего элемента */
     }
 
-    .item-2 {
+    .main__exercise-5__example__flex-container-4__item-2 {
         flex-grow: 1;
     }
 
-    .item-3 {
+    .main__exercise-5__example__flex-container-4__item-3 {
         flex-grow: 2;
     }
 }
 
-.flex-container-5 {
+.main__exercise-5__example__flex-container-5 {
     display: flex;
     justify-content: stretch;
     gap: 10px;
@@ -274,20 +279,20 @@ h3 {
         }
     }
 
-    .item-1 {
+    .main__exercise-5__example__flex-container-5__item-1 {
         flex: 0 0 120px; 
         /* Здесь задано только значение для 'flex-basis' 
         Поэтому у этого элемента будет фиксированная ширина 120px*/
     }
 
-    .item-2 {
+    .main__exercise-5__example__flex-container-5__item-2 {
         flex: 0 1 100px; 
         /* Здесь заданы значения для `flex-shrink`, `flex-basis` 
         Так как значение 'shrink' задано 1, а 'grow' задано 0, элемент будет сжиматься 
         максимально до значения 'basis', то есть до 100px  */
     }
 
-    .item-3 {
+    .main__exercise-5__example__flex-container-5__item-3 {
         flex: 2 1 70px; 
         /* Здесь заданы значения для всех `flex-grow`, `flex-shrink`, `flex-basis` 
         При этом значение grow стоит 2. Из-за этого данный элемент расширяется и занимает все 
@@ -298,7 +303,7 @@ h3 {
 
 /* Задание 6 ------------------------------------------------------ */
 
-.flex-container-6 {
+.main__exercise-6__example__flex-container-6 {
     display: flex;
     justify-content: stretch;
     gap: 10px;
@@ -316,20 +321,20 @@ h3 {
         }
     }
 
-    .item-1 {
+    .main__exercise-6__example__flex-container-6__item-1 {
         flex: 0 0 50%;  
         /* Задаем начальное значение ширины для этого дочернего элемента. 
         При этом мы не задаем 'shrink' и 'grow' чтобы начальное значение не изменилось*/
     }
 
-    .item-2 {
+    .main__exercise-6__example__flex-container-6__item-2 {
         flex: 1 0 auto; 
         /* Здесь мы задаем 'grow' как 1, чтобы он растягивался на всю оставшуюся ширину
         Значение для 'basis' задаем как 'auto' чтобы оно автоматически подстраивалось.
         'shrink' задаем как 0 чтобы элемент не сжимался*/
     }
 
-    .item-3 {
+    .main__exercise-6__example__flex-container-6__item-3 {
         flex: 0 1 150px;  
         /* Элемент с фиксированным размером. Здесь мы поставили значение 'shrink' как 1
         чтобы он сжимался до фиксированного начального значения*/
@@ -339,7 +344,7 @@ h3 {
 
 /* Задание 7 ------------------------------------------------------ */
 
-nav {
+nav.main__exercise-7__navbar-example {
     display: flex;
     justify-content: space-evenly; 
     /* Данное свойство и значение раставляет элементы равномерно по строке.
@@ -353,7 +358,7 @@ nav {
     /* Задаем фиксированную высоту чтобы увидеть эффекты выравнивания по высоте */
     background-color: #4e4949;
 
-    a {
+    a.main__exercise-7__navbar-link {
         text-decoration: none;
         color: #f1f1f1;
     }
@@ -362,7 +367,7 @@ nav {
 
 /* Задание 8 ------------------------------------------------------ */
 
-.gallery {
+.main__exercise-8__example__gallery {
     display: flex;
     flex-flow: column wrap; 
     /* Распологаем все элементы по колонкам с переносом  */
@@ -377,7 +382,7 @@ nav {
 
 }
 
-.gallery .card {
+.main__exercise-8__example__gallery__card {
 
     outline: 1px solid #4e4949;
     padding: 5px;
@@ -385,11 +390,11 @@ nav {
     flex: 0 1 auto; 
     /* Заранее задаем всем элементам данное значение, чтобы они сжимались до минимума в высоту */
 
-    h3 {
+    h3.main__exercise-8__example__gallery__card__title {
         text-align: left;
     }
 
-    button {
+    button.main__exercise-8__example__gallery__card__button {
         padding: 5px 10px;
         outline: 0;
         border: 1px solid #a3a3a3;
@@ -398,23 +403,43 @@ nav {
     }
 }
 
-.gallery .card:nth-child(2) { 
+.main__exercise-8__example__gallery__card:nth-child(2) { 
     flex: 0 0 500px; 
     /* Фиксируем высоту второго элемента  */
 }
 
-.gallery .card:nth-child(5) { 
+.main__exercise-8__example__gallery__card:nth-child(5) { 
     flex: 7 0 auto;
     /* Пятый элемент будет растягиваться по больше других в своей колонке */
 }
 
-.gallery .card:nth-child(7) { 
+.main__exercise-8__example__gallery__card:nth-child(7) { 
     flex: 0 0 50%;
     /* Седьмой элемент будет занимать 50% высоты своей колонки */
 }
 
-.gallery .card:nth-child(12) { 
+.main__exercise-8__example__gallery__card:nth-child(12) { 
     align-self: start;
     /* Последний элемент будет прижиматься к левому краю своей колонки и 
     его ширина уменьшится до размеров содержимого контента */
+}
+
+.footer {
+    width: 500px;
+    padding: 30px;
+    margin-inline: auto;
+
+    .footer__link {
+        text-decoration: none;
+        color: #7c7c7c;
+        width: 200px;
+        display: block;
+        margin-inline: auto;
+        text-align: center;
+        border: 1px solid #cfcfcf;
+        padding: 15px;
+        border-radius: 30px;
+        box-shadow: inset 5px 5px 10px #ffffff;
+        background-color: #e7e7e7;
+    }
 }

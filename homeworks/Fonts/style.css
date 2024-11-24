@@ -20,18 +20,18 @@
 
 
 body {
-    background-color: #f3f3f3;
+    background-color: #e4e4e4;
 }
-
-h1 {
+ 
+.header__title {
     font-family: "Good Vibes", cursive;
     font-variant: normal;
     font-size: 40px;
     text-align: center;
 }
 
-.container-1 , 
-.container-2 {
+.main__container-1 , 
+.main__container-2 {
     width: 500px;
     padding: 30px;
     margin-inline: auto;
@@ -40,39 +40,39 @@ h1 {
     margin-bottom: 50px;
 }
 
-.container-1:hover , 
-.container-2:hover {
+.main__container-1:hover , 
+.main__container-2:hover {
     box-shadow: -3px -3px 8px 4px #ffffff, 5px 5px 10px 3px #e4e3e3;
 }
 
-.container-1 {
+.main__container-1 {
 
-    h2 {
+    .main__container-1__title {
         font-family: "Rubic 80s Fade";
         font-weight: normal;
         color: #63e726;
     }
 
-    p.lorem {
+    p.main__container-1__lorem {
         font-family: Radley;
         font-weight: normal;
     }
 
-    p.numbers {
+    p.main__container-1__numbers {
         font-family: Honk;
         font-weight: normal;
         font-size: 30px;
     }
 
-    p.lorem-2 {
+    p.main__container-1__lorem-2 {
         font-family: Nosifer;
     }
     
 }
 
-.container-2 {
+.main__container-2 {
 
-    h2 {
+    .main__container-2__title {
         font-family: Lobster, Arial, Helvetica, sans-serif;
         /* Здесь шрифт "Lobster" не сработал, так как его вообще не 
         загрузили и не дали никакой ссылки на него. Соответственно
@@ -82,7 +82,7 @@ h1 {
         color: #1a52ee;
     }
 
-    p.lorem-3 {
+    p.main__container-2__lorem {
         font-family: RadleyA, Helvetica, sans-serif;
         /* Здесь допущена ошибка в названии шрифта, 
         поэтому будет использован шрифт идущий следом */
@@ -90,7 +90,7 @@ h1 {
         font-weight: normal;
     }
 
-    p.numbers-2 {
+    p.main__container-2__numbers {
         font-family: "Bungee Spice", Honk, Arial, serif;
         /* Здесь нету ошибок в написании и ссылка на шрифт "Bungee Spice"  
         находиться в html документе*/
@@ -99,7 +99,7 @@ h1 {
         font-size: 30px;
     }
 
-    p.lorem-4 {
+    p.main__container-2__lorem-2 {
         font-family: Nosifer, Georgian, Times, 'Times New Roman', serif;
         /* Здесь допущена ошибка в названии шрифта Georgia.
         Если шрифт Nosifer не сработает, то сработает шрифт Times */
@@ -107,3 +107,22 @@ h1 {
     
 }
 
+.footer {
+    width: 500px;
+    padding: 30px;
+    margin-inline: auto;
+
+    .footer__link {
+        text-decoration: none;
+        color: #7c7c7c;
+        width: 200px;
+        display: block;
+        margin-inline: auto;
+        text-align: center;
+        border: 1px solid #cfcfcf;
+        padding: 15px;
+        border-radius: 30px;
+        box-shadow: inset 5px 5px 10px #ffffff;
+        background-color: #e7e7e7;
+    }
+}
